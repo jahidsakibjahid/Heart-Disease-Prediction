@@ -8,7 +8,48 @@ model = joblib.load("knn_heart_model.pkl")
 scaler = joblib.load("heart_scaler.pkl")
 columns = joblib.load("heart_columns.pkl")
 
-st.title("Heart Disease Prediction")
+# Custom CSS
+st.markdown("""
+<style>
+
+.main {
+    background-color: #f4f7fb;
+}
+
+.hero {
+    background: linear-gradient(120deg, #102a43, #176b87, #20a4a8);
+    padding: 35px 30px;
+    border-radius: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(16,42,67,0.18);
+}
+
+.hero h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #e0f7fa;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+# Custom Header
+st.markdown("""
+<div class="hero">
+    <h1>❤️ Heart Disease Prediction</h1>
+    <p>AI-powered Heart Health Risk Prediction System</p>
+</div>
+""", unsafe_allow_html=True)
+
+
 st.write("Enter patient information below")
 
 # User input
